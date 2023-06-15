@@ -3,6 +3,7 @@ This is fast interface for Wireguard VPN. It can switch on and off VPN by one mo
 
 Supported languages:
 - Russian
+- English
 
 Reqiered programms:
-- Wireguard
+- wireguard (wireguard-tools)
