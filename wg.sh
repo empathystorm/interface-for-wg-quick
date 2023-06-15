@@ -25,12 +25,16 @@ while [ 1 ]; do
     if $ON ; then
         TEXT1="выключить"
         COL3='\033[1;32m' # light green
+        COL4='\033[0;32m'
+        IND="✓"
     else
         TEXT1="включить"
         COL3='\033[1;31m' # light red
+        COL4='\033[0;31m' # light red
+        IND="×"
     fi
 
-    echo -e "${COL2}----------------------${COL3}Wireguard VPN${COL2}-----------------------${NC}"
+    echo -e "${COL2}---------------------${COL3}Wireguard VPN${COL4}(${IND})${COL2}---------------------${NC}"
     wgshow
     if $ON ; then
         line
