@@ -11,7 +11,7 @@ line() {
 while [ 1 ]; do
     clear
 
-    #determining whether VPN is enabled
+    #определение, включен ли VPN
     STR=$(wgshow)
     case "${STR:0:1}" in
         "i") ON=true ;;
@@ -25,12 +25,16 @@ while [ 1 ]; do
     if $ON ; then
         TEXT1="off"
         COL3='\033[1;32m' # light green
+        COL4='\033[0;32m'
+        IND="✓"
     else
         TEXT1="on"
         COL3='\033[1;31m' # light red
+        COL4='\033[0;31m' # light red
+        IND="×"
     fi
 
-    echo -e "${COL2}----------------------${COL3}Wireguard VPN${COL2}-----------------------${NC}"
+    echo -e "${COL2}---------------------${COL3}Wireguard VPN${COL4}(${IND})${COL2}---------------------${NC}"
     wgshow
     if $ON ; then
         line
