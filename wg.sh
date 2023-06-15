@@ -11,7 +11,7 @@ line() {
 while [ 1 ]; do
     clear
 
-    #определение, включен ли VPN
+    #determining whether VPN is enabled
     STR=$(wgshow)
     case "${STR:0:1}" in
         "i") ON=true ;;
@@ -23,10 +23,10 @@ while [ 1 ]; do
     NC='\033[0m' # no color
 
     if $ON ; then
-        TEXT1="выключить"
+        TEXT1="off"
         COL3='\033[1;32m' # light green
     else
-        TEXT1="включить"
+        TEXT1="on"
         COL3='\033[1;31m' # light red
     fi
 
@@ -35,25 +35,25 @@ while [ 1 ]; do
     if $ON ; then
         line
     fi
-    echo -e " ${COL1}1${NC}- $TEXT1 VPN"
-    echo -e " ${COL1}2${NC}- выйти из скрипта"
+    echo -e " ${COL1}1${NC}- turn $TEXT1 VPN"
+    echo -e " ${COL1}2${NC}- exit script"
     line
-    echo -n "Введите команду: "
+    echo -n "Enter command: "
 
     read OPT
     
     case $OPT in
     1)
-    	if $ON ; then
-    		sudo wg-quick down wg0
-    	else
-    		sudo wg-quick up wg0
-    	fi;;
+        if $ON ; then
+            sudo wg-quick down wg0
+        else
+            sudo wg-quick up wg0
+        fi;;
     2)
-    	clear
-    	exit;;
+        clear
+        exit;;
     *)
-    	echo "Введена неправильная команда"
-    	read;;
+        echo "Entered wrong command"
+        read;;
     esac
 done
