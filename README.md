@@ -8,4 +8,4 @@ Supported languages:
 - English
 
 Reqiered programms:
-- 'wireguard' ('wireguard-tools')
+- `wireguard` (`wireguard-tools`)
