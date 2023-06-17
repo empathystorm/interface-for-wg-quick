@@ -25,12 +25,12 @@ while [ 1 ]; do
     if $ON ; then
         TEXT1="выключить"
         COL3='\033[1;32m' # light green
-        COL4='\033[0;32m'
+        COL4='\033[0;32m' # dark green
         IND="✓"
     else
         TEXT1="включить"
         COL3='\033[1;31m' # light red
-        COL4='\033[0;31m' # light red
+        COL4='\033[0;31m' # dark red
         IND="×"
     fi
 
