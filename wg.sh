@@ -11,7 +11,7 @@ line() {
 while [ 1 ]; do
     clear
 
-    #определение, включен ли VPN
+    #determining whether VPN is enabled
     STR=$(wgshow)
     case "${STR:0:1}" in
         "i") ON=true ;;
