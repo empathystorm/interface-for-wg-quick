@@ -30,7 +30,7 @@ while [ 1 ]; do
     else
         TEXT1="on"
         COL3='\033[1;31m' # light red
-        COL4='\033[0;31m' # light red
+        COL4='\033[0;31m' # dark red
         IND="×"
     fi
 
