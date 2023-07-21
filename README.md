@@ -12,4 +12,4 @@ This is fast interface for Wireguard VPN. It can turn the VPN on and off in one 
   
 ### Guide
 - **How to start**: run script with `./wg.sh` in repo directory
-- **How to switch to russian**: `git checkout russian`
+- **How to switch to russian**: `git checkout russian` in repo directory
